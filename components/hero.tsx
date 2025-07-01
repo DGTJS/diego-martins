@@ -13,47 +13,47 @@ export default function Hero() {
       name: "GitHub",
       icon: FaGithub,
       url: "https://github.com/DGTJS",
-      color: "hover:text-gray-300"
+      color: "hover:text-gray-300",
     },
     {
       name: "LinkedIn",
       icon: FaLinkedin,
       url: "https://linkedin.com/in/diego-martins7",
-      color: "hover:text-blue-400"
+      color: "hover:text-blue-400",
     },
     {
       name: "Email",
       icon: FaEnvelope,
       url: "mailto:diego.martins@email.com",
-      color: "hover:text-red-400"
-    }
+      color: "hover:text-red-400",
+    },
   ];
 
   const scrollToNextSection = () => {
-    const nextSection = document.getElementById('skills-section');
+    const nextSection = document.getElementById("skills-section");
     if (nextSection) {
-      nextSection.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
+      nextSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
       });
     } else {
       // Se não encontrar a seção de skills, rola para baixo da página
       window.scrollTo({
         top: window.innerHeight,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
     }
   };
 
   const handleKeyDown = (event: React.KeyboardEvent) => {
-    if (event.key === 'Enter' || event.key === ' ') {
+    if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();
       scrollToNextSection();
     }
   };
 
   return (
-    <section className="h-screen w-full relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+    <section className="h-screen w-full  relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 pt-10 ">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 dark:from-cyan-500/10 dark:via-blue-500/10 dark:to-purple-500/10" />
@@ -64,7 +64,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-22 sm:pt-32 relative z-10">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 pt-16 sm:pt-24 md:pt-32 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
           {/* Text content */}
           <motion.div
@@ -88,7 +88,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white"
+              className="text-start text-6xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 md:mb-8 text-white "
             >
               <span className="text-gradient">Full Stack</span>
               <br />
@@ -108,9 +108,9 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 1.1 }}
               className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8 leading-relaxed"
             >
-              Desenvolvedor apaixonado por criar experiências digitais inovadoras. 
-              Especializado em React, Node.js e TypeScript, sempre buscando 
-              aprender novas tecnologias e metodologias.
+              Desenvolvedor apaixonado por criar experiências digitais
+              inovadoras. Especializado em React, Node.js e TypeScript, sempre
+              buscando aprender novas tecnologias e metodologias.
             </motion.p>
 
             <motion.div
@@ -125,11 +125,11 @@ export default function Hero() {
                 className="btn-primary flex items-center justify-center gap-2 text-sm sm:text-base"
               >
                 <Link href="#work">
-                <span>Ver Projetos</span>
+                  <span>Ver Projetos</span>
                 </Link>
                 <FaGithub className="w-4 h-4" />
               </motion.button>
-              
+
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -171,7 +171,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-            className="w-full lg:w-1/2 relative"
+            className="w-full lg:w-1/2 relative hidden sm:block"
             style={{ y }}
           >
             <div className="relative w-full max-w-md mx-auto lg:max-w-none aspect-square group">
@@ -186,7 +186,7 @@ export default function Hero() {
                 }}
                 className="absolute inset-0 rounded-3xl bg-gradient-to-r from-cyan-500/30 via-blue-500/30 to-purple-500/30 opacity-50 animate-glow"
               />
-              
+
               {/* Floating Animation */}
               <motion.div
                 animate={{ y: [0, -20, 0] }}
@@ -216,8 +216,8 @@ export default function Hero() {
                     Diego Martins
                     <motion.span
                       className="block text-gradient text-base sm:text-lg font-medium"
-                      animate={{ 
-                        backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] 
+                      animate={{
+                        backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
                       }}
                       transition={{
                         duration: 3,
@@ -231,17 +231,20 @@ export default function Hero() {
                       Full Stack Developer
                     </motion.span>
                   </div>
-                  
+
                   {/* Stats */}
                   <div className="flex gap-2 sm:gap-4 text-xs sm:text-sm text-gray-300">
                     <div>
-                      <span className="font-semibold text-cyan-400">3+</span> Anos Exp
+                      <span className="font-semibold text-cyan-400">3+</span>{" "}
+                      Anos Exp
                     </div>
                     <div>
-                      <span className="font-semibold text-cyan-400">20+</span> Projetos
+                      <span className="font-semibold text-cyan-400">20+</span>{" "}
+                      Projetos
                     </div>
                     <div>
-                      <span className="font-semibold text-cyan-400">5+</span> Tecnologias
+                      <span className="font-semibold text-cyan-400">5+</span>{" "}
+                      Tecnologias
                     </div>
                   </div>
                 </motion.div>
@@ -278,7 +281,6 @@ export default function Hero() {
               className="w-1 h-3 bg-cyan-500 rounded-full mt-2 group-hover:bg-cyan-400 transition-colors"
             />
           </motion.div>
-
         </motion.button>
       </motion.div>
     </section>
