@@ -36,7 +36,7 @@ export default function Navbar() {
           : "backdrop-blur-lg bg-transparent"
       } transition-all duration-300 ease-out`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-4">
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4">
         <div className="flex items-center justify-between">
           {/* Logo Section */}
           <motion.div
@@ -112,7 +112,7 @@ export default function Navbar() {
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="md:hidden mt-6 pb-6 space-y-4"
+            className="md:hidden mt-6 pb-6 space-y-4 flex flex-col items-center"
           >
             {navItems.map((item) => (
               <a

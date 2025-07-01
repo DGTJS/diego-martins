@@ -52,14 +52,14 @@ const projects = [
 
 export default function Main() {
     return (
-        <section className="py-32 relative" id="work">
+        <section className="py-12 sm:py-20 md:py-32 relative" id="work">
             <div className="max-w-7xl mx-auto px-6">
                 {/* Section Heading */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="flex flex-col items-center mb-20"
+                    className="flex flex-col items-center mb-10 sm:mb-16 md:mb-20"
                 >
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-center">
                         Meus Projetos
@@ -72,7 +72,7 @@ export default function Main() {
                 </motion.div>
 
                 {/* Project Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 relative z-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 relative z-10">
                     {projects.map((project, i) => (
                         <motion.div
                             key={i}
@@ -83,7 +83,7 @@ export default function Main() {
                                 y: -10,
                                 transition: { duration: 0.2 }
                             }}
-                            className="group relative bg-gray-800/50 border border-gray-700 rounded-2xl overflow-hidden hover:border-cyan-500/30 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10"
+                            className="group relative bg-gray-800/50 border border-gray-700 rounded-2xl overflow-hidden hover:border-cyan-500/30 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 max-w-xs w-full mx-auto"
                         >
                             {/* Image Section */}
                             <motion.div
@@ -186,7 +186,7 @@ export default function Main() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 }}
-                    className="flex justify-center mt-20 relative z-[5]"
+                    className="flex justify-center mt-10 sm:mt-16 md:mt-20 relative z-[5]"
                 >
                     <motion.a
                         href="https://github.com/DGTJS"

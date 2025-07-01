@@ -35,14 +35,14 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-32 relative">
+    <section id="experience" className="py-12 sm:py-20 md:py-32 relative">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col items-center mb-20"
+          className="flex flex-col items-center mb-10 sm:mb-16 md:mb-20"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-center">
             Experiência Profissional
@@ -59,7 +59,7 @@ export default function Experience() {
           {/* Timeline Line */}
           <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-cyan-500 to-blue-600" />
           
-          <div className="space-y-12">
+          <div className="space-y-8 sm:space-y-10 md:space-y-12">
             {experiences.map((experience, index) => (
               <motion.div
                 key={index}
@@ -74,7 +74,7 @@ export default function Experience() {
                 <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-cyan-500 rounded-full border-4 border-gray-900 z-10" />
                 
                 {/* Content Card */}
-                <div className={`ml-12 md:ml-0 md:w-5/12 ${index % 2 === 0 ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'}`}>
+                <div className={`ml-12 md:ml-0 md:w-5/12 ${index % 2 === 0 ? 'md:mr-auto md:pr-8' : 'md:ml-auto md:pl-8'} max-w-xs w-full mx-auto`}>
                   <Card className="bg-gray-800/50 border-gray-700 hover:bg-gray-800/70 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10">
                     <CardContent className="p-6">
                       <div className="flex items-start justify-between mb-4">

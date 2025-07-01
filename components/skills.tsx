@@ -93,14 +93,14 @@ const skillCategories = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-32 relative">
+    <section id="skills" className="py-12 sm:py-20 md:py-32 px-2 relative">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="flex flex-col items-center mb-20"
+          className="flex flex-col items-center mb-10 sm:mb-16 md:mb-20"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-center">
             Minhas Habilidades
@@ -125,7 +125,7 @@ export default function Skills() {
                 {category.name}
               </h3>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
                 {category.skills.map((skill, skillIndex) => (
                   <motion.div
                     key={skill.name}
@@ -140,7 +140,7 @@ export default function Skills() {
                       scale: 1.05,
                       transition: { duration: 0.2 }
                     }}
-                    className="cursor-pointer"
+                    className="cursor-pointer max-w-xs w-full mx-auto"
                   >
                     <Card className="bg-gray-800/50 border-gray-700 hover:bg-gray-800/70 hover:border-cyan-500/30 transition-all duration-300 h-full">
                       <CardContent className="p-6">
