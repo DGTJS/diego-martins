@@ -67,7 +67,7 @@ colors: {
 
 ## 📞 Contato
 
-- **Email:** diego.martins@email.com
+- **Email:** joaodiegom21@gmail.com
 - **LinkedIn:** [linkedin.com/in/diego-martins7](https://linkedin.com/in/diego-martins7)
 - **GitHub:** [github.com/DGTJS](https://github.com/DGTJS)
 

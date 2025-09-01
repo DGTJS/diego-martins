@@ -24,7 +24,7 @@ export default function Hero() {
     {
       name: "Email",
       icon: FaEnvelope,
-      url: "mailto:diego.martins@email.com",
+      url: "mailto:joaodiegom21@gmail.com",
       color: "hover:text-red-400",
     },
   ];
@@ -119,16 +119,16 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 1.4 }}
               className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8"
             >
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-primary flex items-center justify-center gap-2 text-sm sm:text-base"
-              >
-                <Link href="#work">
+              <Link href="#work">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="btn-primary flex items-center justify-center gap-2 text-sm sm:text-base"
+                >
                   <span>Ver Projetos</span>
-                </Link>
-                <FaGithub className="w-4 h-4" />
-              </motion.button>
+                  <FaGithub className="w-4 h-4" />
+                </motion.button>
+              </Link>
 
               <motion.button
                 whileHover={{ scale: 1.05 }}

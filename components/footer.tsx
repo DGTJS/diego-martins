@@ -7,27 +7,27 @@ const socialLinks = [
     name: "GitHub",
     icon: FaGithub,
     url: "https://github.com/DGTJS",
-    color: "hover:text-gray-300"
+    color: "hover:text-gray-300",
   },
   {
     name: "LinkedIn",
     icon: FaLinkedin,
     url: "https://linkedin.com/in/yourusername",
-    color: "hover:text-blue-400"
+    color: "hover:text-blue-400",
   },
   {
     name: "Email",
     icon: FaEnvelope,
-    url: "mailto:diego.martins@email.com",
-    color: "hover:text-red-400"
-  }
+    url: "mailto:joaodiegom21@gmail.com",
+    color: "hover:text-red-400",
+  },
 ];
 
 export default function Footer() {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   };
 
@@ -48,9 +48,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8">
           {/* Brand Section */}
           <div>
-            <h3 className="text-2xl font-bold text-gradient mb-4">Diego Martins</h3>
+            <h3 className="text-2xl font-bold text-gradient mb-4">
+              Diego Martins
+            </h3>
             <p className="text-gray-400 mb-4">
-              Desenvolvedor Full Stack apaixonado por criar experiências digitais inovadoras.
+              Desenvolvedor Full Stack apaixonado por criar experiências
+              digitais inovadoras.
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social) => {
@@ -75,15 +78,19 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-4">Links Rápidos</h4>
+            <h4 className="text-lg font-semibold text-white mb-4">
+              Links Rápidos
+            </h4>
             <ul className="space-y-2">
               <li>
-                <a 
-                  href="#skills-section" 
+                <a
+                  href="#skills-section"
                   className="text-gray-400 hover:text-cyan-400 transition-colors"
                   onClick={(e) => {
                     e.preventDefault();
-                    document.getElementById('skills-section')?.scrollIntoView({ behavior: 'smooth' });
+                    document
+                      .getElementById("skills-section")
+                      ?.scrollIntoView({ behavior: "smooth" });
                   }}
                 >
                   Habilidades
@@ -102,24 +109,28 @@ export default function Footer() {
                 </a>
               </li> */}
               <li>
-                <a 
-                  href="#projects-section" 
+                <a
+                  href="#projects-section"
                   className="text-gray-400 hover:text-cyan-400 transition-colors"
                   onClick={(e) => {
                     e.preventDefault();
-                    document.getElementById('projects-section')?.scrollIntoView({ behavior: 'smooth' });
+                    document
+                      .getElementById("projects-section")
+                      ?.scrollIntoView({ behavior: "smooth" });
                   }}
                 >
                   Projetos
                 </a>
               </li>
               <li>
-                <a 
-                  href="#contact-section" 
+                <a
+                  href="#contact-section"
                   className="text-gray-400 hover:text-cyan-400 transition-colors"
                   onClick={(e) => {
                     e.preventDefault();
-                    document.getElementById('contact-section')?.scrollIntoView({ behavior: 'smooth' });
+                    document
+                      .getElementById("contact-section")
+                      ?.scrollIntoView({ behavior: "smooth" });
                   }}
                 >
                   Contato
@@ -133,7 +144,7 @@ export default function Footer() {
             <h4 className="text-lg font-semibold text-white mb-4">Contato</h4>
             <div className="space-y-2 text-gray-400">
               <p>📍 São Paulo, Brasil</p>
-              <p>📧 diego.martins@email.com</p>
+              <p>📧 joaodiegom21@gmail.com</p>
               <p>📱 +55 (11) 99005-9775</p>
             </div>
           </div>
@@ -141,7 +152,8 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © {new Date().getFullYear()} Diego Martins. Todos os direitos reservados.
+            © {new Date().getFullYear()} Diego Martins. Todos os direitos
+            reservados.
           </p>
         </div>
       </div>
