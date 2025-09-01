@@ -96,18 +96,7 @@ export default function Footer() {
                   Habilidades
                 </a>
               </li>
-              {/* <li>
-                <a 
-                  href="#experience-section" 
-                  className="text-gray-400 hover:text-cyan-400 transition-colors"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    document.getElementById('experience-section')?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                >
-                  Experiência
-                </a>
-              </li> */}
+
               <li>
                 <a
                   href="#projects-section"

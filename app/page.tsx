@@ -13,9 +13,6 @@ export default function Home() {
       <div id="skills-section">
         <Skills />
       </div>
-      {/* <div id="experience-section">
-        <Experience />
-      </div> */}
       <div id="projects-section">
         <Main />
       </div>
