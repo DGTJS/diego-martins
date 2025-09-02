@@ -198,7 +198,7 @@ export default function Hero() {
                 className="flex w-[80%] aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden border border-gray-200 dark:border-white/10 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm shadow-2xl"
               >
                 <Image
-                  src="/image/portfolio.png"
+                  src="/image/perfil.png"
                   alt="Diego Martins - Full Stack Developer"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
