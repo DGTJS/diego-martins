@@ -62,7 +62,7 @@ const projects = [
       { name: "Mongodb", icon: SiMongodb, color: "#339933" },
       { name: "Node.js", icon: FaNode, color: "#339933" },
     ],
-    image: "/projects/task-manager.png",
+    image: "/projects/taskManager.png",
     liveUrl: "https://task-manager-frontend-teal-beta.vercel.app/",
     githubUrl: "https://github.com/DGTJS/Task-manager-frontend",
     features: [
