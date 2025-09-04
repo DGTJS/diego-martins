@@ -2,12 +2,12 @@
 import { motion } from "framer-motion";
 import { FaNode, FaReact, FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import {
-  SiD3Dotjs,
-  SiNextdotjs,
-  SiTailwindcss,
-  SiTypescript,
+  // SiD3Dotjs,
+  // SiNextdotjs,
+  // SiTailwindcss,
+  // SiTypescript,
   SiMongodb,
-  SiPostgresql,
+  // SiPostgresql,
 } from "react-icons/si";
 import Image from "next/image";
 import { ArrowUpRightIcon } from "@heroicons/react/16/solid";
