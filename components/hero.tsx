@@ -130,14 +130,16 @@ export default function Hero() {
                 </motion.button>
               </Link>
 
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-secondary flex items-center justify-center gap-2 text-sm sm:text-base"
-              >
-                <FaDownload className="w-4 h-4" />
-                <span>Download CV</span>
-              </motion.button>
+              <Link href="curriculo_Diego_Martins.pdf" download>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="btn-secondary flex items-center justify-center gap-2 text-sm sm:text-base"
+                >
+                  <FaDownload className="w-4 h-4" />
+                  <span>Download CV</span>
+                </motion.button>
+              </Link>
             </motion.div>
 
             {/* Social Links */}
