@@ -7,53 +7,38 @@ import {
   // SiTailwindcss,
   // SiTypescript,
   SiMongodb,
-  // SiPostgresql,
+  SiNextdotjs,
+  SiShadcnui,
+  SiPostgresql,
+  SiTailwindcss,
+  SiTypescript,
 } from "react-icons/si";
 import Image from "next/image";
 import { ArrowUpRightIcon } from "@heroicons/react/16/solid";
 
 const projects = [
-  // {
-  //   title: "E-commerce Platform",
-  //   description:
-  //     "Plataforma de e-commerce moderna com carrinho de compras, sistema de pagamentos e painel administrativo completo. Desenvolvida com foco em performance e experiência do usuário.",
-  //   tech: [
-  //     { name: "React", icon: FaReact, color: "#61DAFB" },
-  //     { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
-  //     { name: "Tailwind", icon: SiTailwindcss, color: "#06B6D4" },
-  //     { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
-  //   ],
-  //   image: "/projects/ecommerce.png",
-  //   liveUrl: "https://ecommerce-demo.com",
-  //   githubUrl: "https://github.com/DGTJS/ecommerce",
-  //   features: [
-  //     "Carrinho de compras",
-  //     "Sistema de pagamentos",
-  //     "Painel admin",
-  //     "Responsivo",
-  //   ],
-  // },
-  // {
-  //   title: "Analytics Dashboard",
-  //   description:
-  //     "Dashboard de analytics em tempo real com visualizações interativas de dados. Inclui gráficos dinâmicos, filtros avançados e exportação de relatórios.",
-  //   tech: [
-  //     { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
-  //     { name: "D3.js", icon: SiD3Dotjs, color: "#F9A03C" },
-  //     { name: "Node.js", icon: FaNode, color: "#339933" },
-  //     { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
-  //   ],
-  //   image: "/projects/analytics.jpg",
-  //   liveUrl: "https://analytics-demo.com",
-  //   githubUrl: "https://github.com/DGTJS/analytics",
-  //   features: [
-  //     "Gráficos interativos",
-  //     "Tempo real",
-  //     "Exportação PDF",
-  //     "Filtros avançados",
-  //   ],
-  // },
+
   {
+      title: "Sistema de Barbearia",
+      description:
+      "Um sistema de barbearia desenvolvido para gerenciar clientes, agendamentos e serviços. Desenvolvido com foco em boas práticas de desenvolvimento full stack.",
+      tech: [
+        { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
+        { name: "Shadcn", icon: SiShadcnui, color: "#000000" },
+        { name: "postgresql", icon: SiPostgresql, color: "#336791" },
+        { name: "tailwindcss", icon: SiTailwindcss, color: "#38BDF8" },
+        { name: "typescript", icon: SiTypescript, color: "#3178C6" },
+      ],
+      image: "/projects/barbearia.png",
+      liveUrl: "https://barbearia-saas.vercel.app/",
+      githubUrl: "https://github.com/DGTJS/Barbearia-frontend",
+      features: [
+        "Gerenciamento de clientes",
+        "Gerenciamento de agendamentos",
+        "Gerenciamento de serviços",
+      ],
+    },
+    {
     title: "Task Manager",
     description:
       "Um projeto simples de gerenciamento de tarefas desenvolvido para portfólio, com foco em boas práticas de desenvolvimento full stack.",
