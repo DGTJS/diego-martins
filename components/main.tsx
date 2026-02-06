@@ -18,26 +18,7 @@ import { ArrowUpRightIcon } from "@heroicons/react/16/solid";
 
 const projects = [
 
-  {
-      title: "Sistema de Barbearia",
-      description:
-      "Um sistema de barbearia desenvolvido para gerenciar clientes, agendamentos e serviços. Desenvolvido com foco em boas práticas de desenvolvimento full stack.",
-      tech: [
-        { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
-        { name: "Shadcn", icon: SiShadcnui, color: "#000000" },
-        { name: "postgresql", icon: SiPostgresql, color: "#336791" },
-        { name: "tailwindcss", icon: SiTailwindcss, color: "#38BDF8" },
-        { name: "typescript", icon: SiTypescript, color: "#3178C6" },
-      ],
-      image: "/projects/barbearia.png",
-      liveUrl: "https://barbearia-saas.vercel.app/",
-      githubUrl: "https://github.com/DGTJS/Barbearia-frontend",
-      features: [
-        "Gerenciamento de clientes",
-        "Gerenciamento de agendamentos",
-        "Gerenciamento de serviços",
-      ],
-    },
+ 
     {
     title: "Task Manager",
     description:
