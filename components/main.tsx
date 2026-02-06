@@ -7,19 +7,12 @@ import {
   // SiTailwindcss,
   // SiTypescript,
   SiMongodb,
-  SiNextdotjs,
-  SiShadcnui,
-  SiPostgresql,
-  SiTailwindcss,
-  SiTypescript,
 } from "react-icons/si";
 import Image from "next/image";
 import { ArrowUpRightIcon } from "@heroicons/react/16/solid";
 
 const projects = [
-
- 
-    {
+  {
     title: "Task Manager",
     description:
       "Um projeto simples de gerenciamento de tarefas desenvolvido para portfólio, com foco em boas práticas de desenvolvimento full stack.",
