@@ -4,6 +4,7 @@ import { useState } from "react";
 import MenuItem from "./menu-items";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 const navItems = [
   { name: "Projetos", href: "#work" },
@@ -38,24 +39,26 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4">
         <div className="flex items-center justify-between">
           {/* Logo Section */}
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="flex items-center gap-3 group"
-          >
-            <div className="relative h-10 w-10 rounded-full overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 animate-spin-slow [mask-image:linear-gradient(transparent,white)]" />
-              <div className="font-bold absolute inset-[2px] text-white bg-gray-900 rounded-full flex items-center justify-center">
-                DM
-              </div>
-            </div>
-            <motion.h1
-              className={`text-xl font-bold ${
-                isScrolled ? "text-white" : "text-white/90"
-              } transition-all duration-300 ease-out`}
+          <Link href="/" className="cursor-pointer">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              className="flex items-center gap-3 group"
             >
-              Diego Martins
-            </motion.h1>
-          </motion.div>
+              <div className="relative h-10 w-10 rounded-full overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 animate-spin-slow [mask-image:linear-gradient(transparent,white)]" />
+                <div className="font-bold absolute inset-[2px] text-white bg-gray-900 rounded-full flex items-center justify-center">
+                  DM
+                </div>
+              </div>
+              <motion.h1
+                className={`text-xl font-bold ${
+                  isScrolled ? "text-white" : "text-white/90"
+                } transition-all duration-300 ease-out`}
+              >
+                Diego Martins
+              </motion.h1>
+            </motion.div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
