@@ -1,6 +1,6 @@
-// import type { NextConfig } from "next";
+import type { NextConfig } from "next";
 
-const nextConfig = {
+const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
@@ -13,9 +13,11 @@ const nextConfig = {
       },
     ],
   },
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   webpack: (config: any) => {
+    config.resolve = config.resolve || {};
     config.resolve.fallback = {
-      ...config.resolve.fallback,
+      ...(config.resolve.fallback || {}),
       fs: false,
     };
     return config;
