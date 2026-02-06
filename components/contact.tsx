@@ -23,7 +23,7 @@ const contactInfo = [
     icon: PhoneIcon,
     title: "Telefone",
     value: "+55 (11) 99005-9775",
-    link: "tel:+5511990059775",
+    link: "https://wa.me/5511990059775",
     color: "text-green-400",
   },
   {
@@ -75,11 +75,11 @@ export default function Contact() {
           "service_16hw8th", // Substitua pelo seu Service ID
           "template_g9mggog", // Substitua pelo seu Template ID
           form.current,
-          "uUiAVRwEcfOOOWrrp" // Substitua pelo seu Public Key
+          "uUiAVRwEcfOOOWrrp", // Substitua pelo seu Public Key
         )
         .then(
           () => setSent(true),
-          () => setError("Erro ao enviar. Tente novamente.")
+          () => setError("Erro ao enviar. Tente novamente."),
         );
     }
   };
