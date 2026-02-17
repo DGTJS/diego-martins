@@ -49,9 +49,9 @@ const projects = [
       { name: "Css3", icon: FaCss3, color: "#1572B6" },
       { name: "JavaScript", icon: FaJs, color: "#F7DF1E" },
     ],
-    image: "/projects/OpenWeatherPortfolio.jpeg", // ou Project, se esse for o nome do arquivo
+    image: "/projects/OpenWeatherPortfolio.jpeg",
     liveUrl: "https://weather-app-example.com/",
-    githubUrl: "https://github.com/yourusername/weather-app",
+    githubUrl: "https://github.com/DGTJS/PraticandoPort",
     features: [
       "Consulta de previsão do tempo por cidade",
       "Exibição de temperatura atual e previsão estendida",
