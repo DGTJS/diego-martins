@@ -29,7 +29,7 @@ const projects = [
       { name: "Mongodb", icon: SiMongodb, color: "#339933" },
       { name: "Node.js", icon: FaNode, color: "#339933" },
     ],
-    image: "/projects/taskManager.png",
+    image: "/projects/taskManager.jpeg",
     liveUrl: "https://task-manager-frontend-teal-beta.vercel.app/",
     githubUrl: "https://github.com/DGTJS/Task-manager-frontend",
     features: [
@@ -49,7 +49,7 @@ const projects = [
       { name: "Css3", icon: FaCss3, color: "#1572B6" },
       { name: "JavaScript", icon: FaJs, color: "#F7DF1E" },
     ],
-    image: "/projects/OpenWeatherProject.jpeg",
+    image: "/projects/OpenWeatherPortfolio.jpeg",
     liveUrl: "https://weather-app-example.com/",
     githubUrl: "https://github.com/yourusername/weather-app",
     features: [
