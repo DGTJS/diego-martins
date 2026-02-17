@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# imagens ignoradas
+public/projects/barbearia.png
+public/projects/taskManager.png
+public/projects/OpenWeatherProject.jpeg

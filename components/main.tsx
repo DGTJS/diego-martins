@@ -1,6 +1,14 @@
 "use client";
 import { motion } from "framer-motion";
-import { FaNode, FaReact, FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import {
+  FaNode,
+  FaReact,
+  FaExternalLinkAlt,
+  FaGithub,
+  FaJs,
+  FaCss3,
+  FaHtml5,
+} from "react-icons/fa";
 import {
   // SiD3Dotjs,
   // SiNextdotjs,
@@ -30,6 +38,25 @@ const projects = [
       "Marcar tarefas como concluídas",
       "Atualização em tempo real",
       "API RESTful",
+    ],
+  },
+  {
+    title: "Sistema de previsão do tempo",
+    description:
+      "Um sistema de previsão do tempo desenvolvido para portfólio, que estou aprimorando aos poucos puxando fundamentos de JavaScript.",
+    tech: [
+      { name: "Html5", icon: FaHtml5, color: "#E34F26" },
+      { name: "Css3", icon: FaCss3, color: "#1572B6" },
+      { name: "JavaScript", icon: FaJs, color: "#F7DF1E" },
+    ],
+    image: "/projects/OpenWeatherProject.jpeg",
+    liveUrl: "https://weather-app-example.com/",
+    githubUrl: "https://github.com/yourusername/weather-app",
+    features: [
+      "Consulta de previsão do tempo por cidade",
+      "Exibição de temperatura atual e previsão estendida",
+      "Interface responsiva e intuitiva",
+      "Consumo de API externa",
     ],
   },
 ];
@@ -76,7 +103,7 @@ export default function Main() {
                 transition={{ duration: 0.3 }}
               >
                 <Image
-                  src={project.image}
+                  src={project.image || ""}
                   alt={project.title}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -129,7 +156,7 @@ export default function Main() {
                     Principais Features:
                   </h4>
                   <div className="flex flex-wrap gap-1">
-                    {project.features.map((feature, index) => (
+                    {project.features?.map((feature, index) => (
                       <span
                         key={index}
                         className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-full border border-gray-600"
