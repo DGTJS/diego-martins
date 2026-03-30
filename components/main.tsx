@@ -14,7 +14,11 @@ import {
   SiMongodb,
   SiNextdotjs,
   SiPostgresql,
+  SiTailwindcss,
   SiTypescript,
+  SiShadcnui,
+  SiPrisma,
+  SiBetterauth,
 } from "react-icons/si";
 import Image from "next/image";
 import { ArrowUpRightIcon } from "@heroicons/react/16/solid";
@@ -28,6 +32,10 @@ const projects = [
       { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
       { name: "TypeScript", icon: SiTypescript, color: "#0070F3" },
       { name: "PostgreSQL", icon: SiPostgresql, color: "#0070F3" },
+      { name: "Tailwind Css", icon: SiTailwindcss, color: "#1572B6" },
+      { name: "ShadcnUI", icon: SiShadcnui, color: "#000000" },
+      { name: "Prisma", icon: SiPrisma, color: "#000000" },
+      { name: "Betterauth", icon: SiBetterauth, color: "#000000" },
       { name: "AI", icon: FaRobot, color: "#000000" },
     ],
     image: "/projects/barbeariaSistema.jpeg",
