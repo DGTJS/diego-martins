@@ -8,18 +8,41 @@ import {
   FaJs,
   FaCss3,
   FaHtml5,
+  FaRobot,
 } from "react-icons/fa";
 import {
-  // SiD3Dotjs,
-  // SiNextdotjs,
-  // SiTailwindcss,
-  // SiTypescript,
   SiMongodb,
+  SiNextdotjs,
+  SiPostgresql,
+  SiTypescript,
 } from "react-icons/si";
 import Image from "next/image";
 import { ArrowUpRightIcon } from "@heroicons/react/16/solid";
 
 const projects = [
+  {
+    title: "Sistema de Barbearia",
+    description:
+      "Projeto para agendamento de horários para barbearias e usando chat com IA, utilizando Next.js, TypeScript e PostgreSQL. ",
+    tech: [
+      { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
+      { name: "TypeScript", icon: SiTypescript, color: "#0070F3" },
+      { name: "PostgreSQL", icon: SiPostgresql, color: "#0070F3" },
+      { name: "AI", icon: FaRobot, color: "#000000" },
+    ],
+    image: "/projects/barbeariaSistema.jpeg",
+    liveUrl: "https://barber-portfolio-ruby.vercel.app/",
+    githubUrl: "https://github.com/DGTJS/BarberPortfolio",
+    features: [
+      "Agendamento de horários",
+      "Chat com IA",
+      "Interface intuitiva",
+      "Responsivo",
+      "Consumo de API externa",
+      "Autenticação de usuárioários",
+      "Cadastro de usuárioários",
+    ],
+  },
   {
     title: "Task Manager",
     description:

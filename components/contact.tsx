@@ -3,11 +3,10 @@ import { motion } from "framer-motion";
 import { Card, CardContent } from "./ui/card";
 import {
   EnvelopeIcon,
-  PhoneIcon,
   MapPinIcon,
   ClockIcon,
 } from "@heroicons/react/24/outline";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
@@ -20,8 +19,8 @@ const contactInfo = [
     color: "text-blue-400",
   },
   {
-    icon: PhoneIcon,
-    title: "Telefone",
+    icon: FaWhatsapp,
+    title: "WhatsApp",
     value: "+55 (11) 99005-9775",
     link: "https://wa.me/5511990059775",
     color: "text-green-400",
@@ -35,8 +34,8 @@ const contactInfo = [
   },
   {
     icon: ClockIcon,
-    title: "Disponibilidade",
-    value: "Segunda a Sexta, 9h-18h",
+    title: "Disponibilidade ",
+    value: "Seg a Sáb, 9h-18h",
     link: "#",
     color: "text-purple-400",
   },

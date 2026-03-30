@@ -237,11 +237,11 @@ export default function Hero() {
                   {/* Stats */}
                   <div className="flex gap-2 sm:gap-4 text-xs sm:text-sm text-gray-300">
                     <div>
-                      <span className="font-semibold text-cyan-400">3+</span>{" "}
+                      <span className="font-semibold text-cyan-400">3</span>{" "}
                       Anos Exp
                     </div>
                     <div>
-                      <span className="font-semibold text-cyan-400">20+</span>{" "}
+                      <span className="font-semibold text-cyan-400">20</span>{" "}
                       Projetos
                     </div>
                     <div>
