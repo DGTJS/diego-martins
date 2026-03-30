@@ -2,6 +2,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Card, CardContent } from "./ui/card";
+import { VscJson } from "react-icons/vsc";
+import { TbApi } from "react-icons/tb";
 
 const skillCategories = [
   {
@@ -15,18 +17,25 @@ const skillCategories = [
         experience: "2 anos",
       },
       {
+        name: "TailwindCss",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+        color: "#3178C6",
+        level: 85,
+        experience: "1.6 anos",
+      },
+      {
         name: "Next.js",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
         color: "#cccccc",
         level: 85,
-        experience: "1.5 anos",
+        experience: "1.6 anos",
       },
       {
         name: "TypeScript",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
         color: "#3178C6",
         level: 80,
-        experience: "1.5 anos",
+        experience: "1.6 anos",
       },
       {
         name: "JavaScript",
@@ -60,6 +69,20 @@ const skillCategories = [
         color: "#336791",
         level: 70,
         experience: "1.5 ano",
+      },
+      {
+        name: "JSON",
+        icon: VscJson,
+        color: "#F7DF1E",
+        level: 90,
+        experience: "2 anos",
+      },
+      {
+        name: "RestAPI",
+        icon: TbApi,
+        color: "#ffffff",
+        level: 90,
+        experience: "2 anos",
       },
     ],
   },
@@ -147,28 +170,17 @@ export default function Skills() {
                         <div className="flex flex-col items-center text-center gap-4">
                           {/* Skill Icon */}
                           <div className="relative">
-                            <Image
-                              src={skill.icon}
-                              alt={skill.name}
-                              width={60}
-                              height={60}
-                              className="object-contain"
-                            />
-                            <motion.div
-                              className="absolute inset-0 rounded-full"
-                              style={{
-                                background: `radial-gradient(circle, ${skill.color}20 0%, transparent 70%)`,
-                              }}
-                              animate={{
-                                scale: [1, 1.2, 1],
-                                opacity: [0.5, 0.8, 0.5],
-                              }}
-                              transition={{
-                                duration: 2,
-                                repeat: Infinity,
-                                ease: "easeInOut",
-                              }}
-                            />
+                            {typeof skill.icon === "string" ? (
+                              <Image
+                                src={skill.icon}
+                                alt={skill.name}
+                                width={60}
+                                height={60}
+                                className="object-contain"
+                              />
+                            ) : (
+                              <skill.icon size={60} />
+                            )}
                           </div>
 
                           {/* Skill Info */}

@@ -56,11 +56,11 @@ export default function Hero() {
     <section className="h-screen w-full  relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 pt-10 ">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 dark:from-cyan-500/10 dark:via-blue-500/10 dark:to-purple-500/10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-900/10 via-blue-900/10 to-purple-900/10 dark:from-cyan-900/10 dark:via-blue-900/10 dark:to-purple-900/10" />
         <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute top-40 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
-          <div className="absolute bottom-20 left-1/2 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-2000" />
+          <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-900/20 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute top-40 right-20 w-96 h-96 bg-blue-900/20 rounded-full blur-3xl animate-pulse delay-1000" />
+          <div className="absolute bottom-20 left-1/2 w-80 h-80 bg-purple-900/20 rounded-full blur-3xl animate-pulse delay-2000" />
         </div>
       </div>
 
@@ -159,7 +159,7 @@ export default function Hero() {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                    className={`p-2 sm:p-3 rounded-lg bg-white/50 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 hover:border-cyan-500/30 transition-all duration-300 ${social.color}`}
+                    className={`p-2 sm:p-3 rounded-lg bg-white/500 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 hover:border-cyan-500/30 transition-all duration-300 ${social.color}`}
                   >
                     <IconComponent className="w-4 h-4 sm:w-5 sm:h-5" />
                   </motion.a>
@@ -179,14 +179,14 @@ export default function Hero() {
             <div className="relative w-full max-w-md mx-auto lg:max-w-none aspect-square group">
               {/* Animated Border */}
               <motion.div
-                initial={{ scale: 0.95 }}
+                initial={{ scale: 0.8 }}
                 animate={{ scale: 1 }}
                 transition={{
                   duration: 2,
                   repeat: Infinity,
-                  repeatType: "mirror",
+                  repeatType: "reverse",
                 }}
-                className="absolute inset-0 rounded-3xl bg-gradient-to-r from-cyan-500/30 via-blue-500/30 to-purple-500/30 opacity-50 animate-glow"
+                className="absolute aspect-[4/5] w-[75%] inset-0 rounded-3xl bg-gradient-to-r from-cyan-900/30 via-blue-900/30 to-purple-900/10  blur-xl"
               />
 
               {/* Floating Animation */}
@@ -197,7 +197,7 @@ export default function Hero() {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="flex w-[80%] aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden border border-gray-200 dark:border-white/10 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm shadow-2xl"
+                className="flex w-[70%] aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden border-none backdrop-blur-2xl shadow-2xl"
               >
                 <Image
                   src="/image/Perfil.png"

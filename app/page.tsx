@@ -7,7 +7,7 @@ import Contact from "@/components/contact";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-900 to-gray-900 text-white">
       <Navbar />
       <Hero />
       <div id="skills-section">
