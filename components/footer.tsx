@@ -52,8 +52,8 @@ export default function Footer() {
               Diego Martins
             </h3>
             <p className="text-gray-400 mb-4">
-              Desenvolvedor Full Stack apaixonado por criar experiências
-              digitais inovadoras.
+              Desenvolvedor Front-end apaixonado por criar experiências digitais
+              inovadoras.
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social) => {

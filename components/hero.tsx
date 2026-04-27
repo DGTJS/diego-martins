@@ -90,7 +90,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="text-start text-6xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 md:mb-8 text-white "
             >
-              <span className="text-gradient">Full Stack</span>
+              <span className="text-gradient">Front End</span>
               <br />
               <motion.span
                 initial={{ opacity: 0, y: 20 }}
@@ -201,7 +201,7 @@ export default function Hero() {
               >
                 <Image
                   src="/image/Perfil.png"
-                  alt="Diego Martins - Full Stack Developer"
+                  alt="Diego Martins - Front-end Developer"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
@@ -230,7 +230,7 @@ export default function Hero() {
                         backgroundSize: "200% 100%",
                       }}
                     >
-                      Full Stack Developer
+                      Front-end Developer
                     </motion.span>
                   </div>
 

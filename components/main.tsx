@@ -25,6 +25,34 @@ import { ArrowUpRightIcon } from "@heroicons/react/16/solid";
 
 const projects = [
   {
+    title: "Navatus",
+    description:
+      "Saas de agendamento de horários para barbearias multi-tenant feito com auxilio do Codex, utilizando Next.js, TypeScript e PostgreSQL. ",
+    tech: [
+      { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
+      { name: "TypeScript", icon: SiTypescript, color: "#0070F3" },
+      { name: "PostgreSQL", icon: SiPostgresql, color: "#0070F3" },
+      { name: "Tailwind Css", icon: SiTailwindcss, color: "#1572B6" },
+      { name: "ShadcnUI", icon: SiShadcnui, color: "#000000" },
+      { name: "Prisma", icon: SiPrisma, color: "#000000" },
+      { name: "Betterauth", icon: SiBetterauth, color: "#000000" },
+      { name: "Codex", icon: FaRobot, color: "#000000" },
+    ],
+    image: "/projects/navatus.jpeg",
+    liveUrl: "https://navatus.site",
+    githubUrl: "https://github.com/DGTJS/BarberPortfolio",
+    features: [
+      "Agendamento de horários",
+      "Chat com IA",
+      "Interface intuitiva",
+      "Responsivo",
+      "Consumo de API externa",
+      "Autenticação de usuárioários",
+      "Cadastro de usuárioários",
+      "Sistema multi-tenant",
+    ],
+  },
+  {
     title: "Sistema de Barbearia",
     description:
       "Projeto para agendamento de horários para barbearias e usando chat com IA, utilizando Next.js, TypeScript e PostgreSQL. ",
@@ -56,7 +84,7 @@ const projects = [
     description:
       "Um projeto simples de gerenciamento de tarefas desenvolvido para portfólio, com foco em boas práticas de desenvolvimento full stack.",
     tech: [
-      { name: "React Native", icon: FaReact, color: "#61DAFB" },
+      { name: "React", icon: FaReact, color: "#61DAFB" },
       { name: "Mongodb", icon: SiMongodb, color: "#339933" },
       { name: "Node.js", icon: FaNode, color: "#339933" },
     ],
@@ -138,7 +166,7 @@ export default function Main() {
                   alt={project.title}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover"
+                  className="object-contain"
                   priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
