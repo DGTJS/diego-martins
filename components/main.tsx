@@ -38,7 +38,7 @@ const projects = [
       { name: "Betterauth", icon: SiBetterauth, color: "#000000" },
     ],
     image: "/projects/navatus.jpeg",
-    liveUrl: "https://navatus.site",
+    liveUrl: "https://navatus.com.br",
     githubUrl: "https://github.com/DGTJS/BarberPortfolio",
     features: [
       "Agendamento de horários",
