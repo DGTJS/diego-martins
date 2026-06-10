@@ -31,6 +31,13 @@ const skillCategories = [
         experience: "1.6 anos",
       },
       {
+        name: "Figma",
+        icon: "https://cdn-icons-png.flaticon.com/512/5968/5968705.png",
+        color: "#ffffff",
+        level: 45,
+        experience: "1 anos",
+      },
+      {
         name: "TypeScript",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
         color: "#3178C6",
@@ -55,6 +62,27 @@ const skillCategories = [
         color: "#339933",
         level: 75,
         experience: "2 anos",
+      },
+      {
+        name: "C",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
+        color: "#ffffff",
+        level: 15,
+        experience: "4 meses",
+      },
+      {
+        name: "Java",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+        color: "#ffffff",
+        level: 20,
+        experience: "4 meses",
+      },
+      {
+        name: "Python",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+        color: "#F7DF1E",
+        level: 20,
+        experience: "4 meses",
       },
       {
         name: "MongoDB",
@@ -97,19 +125,40 @@ const skillCategories = [
         experience: "2.5 anos",
       },
       {
+        name: "Codex",
+        icon: "https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/codex-color.png",
+        color: "#3178C6",
+        level: 55,
+        experience: "8 meses",
+      },
+      {
+        name: "Claude Code",
+        icon: "https://raw.githubusercontent.com/lobehub/lobe-icons/refs/heads/master/packages/static-png/light/claude-color.png",
+        color: "#F05212",
+        level: 45,
+        experience: "8 meses",
+      },
+      {
         name: "GitHub",
         icon: "https://raw.githubusercontent.com/gauravghongde/social-icons/master/PNG/White/Github_white.png",
         color: "#cccccc",
         level: 85,
         experience: "2.5 anos",
       },
-      // {
-      //   name: "Docker",
-      //   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-      //   color: "#2496ED",
-      //   level: 60,
-      //   experience: "6 meses"
-      // }
+      {
+        name: "Docker",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+        color: "#2496ED",
+        level: 60,
+        experience: "6 meses",
+      },
+      {
+        name: "N8N",
+        icon: "https://n8n.io/brandguidelines/logo-white.svg",
+        color: "#E63946",
+        level: 60,
+        experience: "4 meses",
+      },
     ],
   },
 ];
