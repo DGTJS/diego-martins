@@ -74,5 +74,5 @@ colors: {
 ---
 
 <p align="center">
-  <b>© {new Date().getFullYear()} Diego Martins. Todos os direitos reservados.</b>
+  <b>© 2026 Diego Martins. Todos os direitos reservados.</b>
 </p>
