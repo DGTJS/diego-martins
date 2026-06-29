@@ -133,7 +133,7 @@ export default function Main() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 text-center">
             Meus Projetos
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full" />
+          <div className="w-24 h-1 bg-gray-500/20 rounded-full" />
           <p className="text-gray-300 text-center mt-6 max-w-2xl">
             Uma seleção dos meus projetos mais recentes, demonstrando
             habilidades em desenvolvimento full-stack e design de interfaces.
@@ -141,7 +141,7 @@ export default function Main() {
         </motion.div>
 
         {/* Project Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  sm:gap-2 md:gap-4 relative z-10">
           {projects.map((project, i) => (
             <motion.div
               key={i}
@@ -152,11 +152,11 @@ export default function Main() {
                 y: -10,
                 transition: { duration: 0.2 },
               }}
-              className="group relative bg-gray-800/50 border border-gray-700 rounded-2xl overflow-hidden hover:border-cyan-500/30 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10 max-w-xs w-full mx-auto"
+              className="group relative bg-neutral-800/50 border border-neutral-700 rounded-2xl overflow-hidden hover:border-neutral-500/30 transition-all duration-300 hover:shadow-xl hover:shadow-neutral-500/10 max-w-xs w-full mx-auto"
             >
               {/* Image Section */}
               <motion.div
-                className="h-48 relative overflow-hidden"
+                className="h-32 relative overflow-hidden"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
@@ -164,8 +164,8 @@ export default function Main() {
                   src={project.image || ""}
                   alt={project.title}
                   fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-contain"
+                  sizes="100vw"
+                  className="object-cover"
                   priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -196,21 +196,21 @@ export default function Main() {
               </motion.div>
 
               {/* Content Section */}
-              <div className="p-6">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+              <div className="p-4">
+                <div className="flex justify-between items-start mb-2">
+                  <h3 className="text-sm font-semibold text-white group-hover:text-neutral-400 transition-colors">
                     {project.title}
                   </h3>
-                  <ArrowUpRightIcon className="h-5 w-5 text-gray-400 group-hover:text-cyan-400 transition-colors" />
+                  <ArrowUpRightIcon className="h-5 w-5 text-gray-400 group-hover:text-neutral-400 transition-colors" />
                 </div>
 
-                <p className="text-gray-300 mb-4 leading-relaxed">
+                <p className="text-gray-300 mb-4 leading-relaxed text-xs">
                   {project.description}
                 </p>
 
                 {/* Features */}
                 <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">
+                  <h4 className="text-sm font-semibold text-neutral-200 mb-2">
                     Principais Features:
                   </h4>
                   <div className="flex flex-wrap gap-1">
@@ -227,7 +227,7 @@ export default function Main() {
 
                 {/* Technologies */}
                 <div>
-                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">
+                  <h4 className="text-sm font-semibold text-neutral-400 mb-2">
                     Tecnologias:
                   </h4>
                   <div className="flex flex-wrap gap-2">
@@ -236,7 +236,7 @@ export default function Main() {
                       return (
                         <span
                           key={j}
-                          className="px-3 py-1 rounded-full bg-gray-700/50 text-gray-300 text-sm border border-gray-600 hover:bg-gray-700 hover:border-cyan-500/50 transition-colors flex items-center gap-1.5 group/tech"
+                          className="px-3 py-1 rounded-full bg-gray-700/50 text-gray-300 text-sm border border-gray-600 hover:bg-gray-700 hover:border-neutral-500/50 transition-colors flex items-center gap-1.5 group/tech"
                         >
                           <IconComponent
                             style={{ color: tech.color }}
@@ -268,7 +268,7 @@ export default function Main() {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="relative px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-cyan-500/25 flex items-center gap-2"
+            className="relative px-8 py-4 rounded-full bg-gradient-to-r from-neutral-500 to-neutral-600 text-white font-semibold hover:from-neutral-800 hover:to-neutral-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-neutral-500/25 flex items-center gap-2"
           >
             Ver todos os projetos
             <FaGithub className="w-5 h-5" />

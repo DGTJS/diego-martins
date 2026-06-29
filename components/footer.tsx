@@ -32,13 +32,13 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gray-900/50 border-t border-gray-800 relative">
+    <footer className="bg-neutral-900/50 border-t border-neutral-800 relative">
       {/* Back to Top Button */}
       <motion.button
         onClick={scrollToTop}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+        className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-neutral-500 to-neutral-500 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
         aria-label="Voltar ao topo"
       >
         <FaArrowUp className="w-5 h-5" />
@@ -100,7 +100,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#projects-section"
-                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                  className="text-gray-400 hover:text-neutral-400 transition-colors"
                   onClick={(e) => {
                     e.preventDefault();
                     document
@@ -114,7 +114,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#contact-section"
-                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                  className="text-gray-400 hover:text-neutral-400 transition-colors"
                   onClick={(e) => {
                     e.preventDefault();
                     document

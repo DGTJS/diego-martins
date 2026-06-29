@@ -32,7 +32,7 @@ export default function Navbar() {
       animate={{ y: 0 }}
       className={`fixed w-full z-50 ${
         isScrolled
-          ? "backdrop-blur-2xl bg-gray-900/90 shadow-2xl shadow-cyan-500/10"
+          ? "backdrop-blur-2xl bg-neutral-900 shadow-2xl shadow-neutral-500/10"
           : "backdrop-blur-lg bg-transparent"
       } transition-all duration-300 ease-out`}
     >
@@ -45,8 +45,8 @@ export default function Navbar() {
               className="flex items-center gap-3 group"
             >
               <div className="relative h-10 w-10 rounded-full overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 animate-spin-slow [mask-image:linear-gradient(transparent,white)]" />
-                <div className="font-bold absolute inset-[2px] text-white bg-gray-900 rounded-full flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-r from-neutral-500 to-neutral-600 animate-spin-slow [mask-image:linear-gradient(transparent,white)]" />
+                <div className="font-bold absolute inset-[2px] text-white bg-neutral-900 rounded-full flex items-center justify-center">
                   DM
                 </div>
               </div>
@@ -87,9 +87,9 @@ export default function Navbar() {
                 href={socialLinks.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-lg bg-gray-800/50 border border-gray-700 hover:border-cyan-500/30 hover:bg-gray-800/70 transition-all duration-300 group"
+                className="p-3 rounded-lg bg-gray-800/50 border border-gray-700 hover:border-neutral-500/30 hover:bg-gray-800/70 transition-all duration-300 group"
               >
-                <FaLinkedin className="h-5 w-5 text-gray-300 group-hover:text-blue-400 transition-colors" />
+                <FaLinkedin className="h-5 w-5 text-gray-300 group-hover:text-neutral-400 transition-colors" />
               </a>
             </div>
           </div>
@@ -98,10 +98,10 @@ export default function Navbar() {
           <div className="md:hidden flex items-center gap-3">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-3 rounded-lg bg-gray-800/50 border border-gray-700 hover:border-cyan-500/30 hover:bg-gray-800/70 transition-all duration-300"
+              className="p-3 rounded-lg bg-neutral-800/50 border border-neutral-700 hover:border-neutral-500/30 hover:bg-neutral-800/70 transition-all duration-300"
             >
               {isMenuOpen ? (
-                <XMarkIcon className="h-6 w-6 text-gray-300" />
+                <XMarkIcon className="h-6 w-6 text-neutral-300" />
               ) : (
                 <Bars3Icon className="h-6 w-6 text-gray-300" />
               )}

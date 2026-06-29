@@ -3,6 +3,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from "react-icons/fa";
+import { Button } from "./ui/button";
+import { CoolMode } from "./ui/cool-mode";
 
 export default function Hero() {
   const { scrollY } = useScroll();
@@ -53,17 +55,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="h-screen w-full  relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 pt-10 ">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-900/10 via-blue-900/10 to-purple-900/10 dark:from-cyan-900/10 dark:via-blue-900/10 dark:to-purple-900/10" />
-        <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-900/20 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute top-40 right-20 w-96 h-96 bg-blue-900/20 rounded-full blur-3xl animate-pulse delay-1000" />
-          <div className="absolute bottom-20 left-1/2 w-80 h-80 bg-purple-900/20 rounded-full blur-3xl animate-pulse delay-2000" />
-        </div>
-      </div>
-
+    <section className="h-screen w-full  relative overflow-hidden bg-gradient-from-gray-900 ">
       <div className="max-w-7xl mx-auto px-2 sm:px-4 pt-16 sm:pt-24 md:pt-32 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
           {/* Text content */}
@@ -73,16 +65,11 @@ export default function Hero() {
             transition={{ duration: 1, ease: "easeOut" }}
             className="relative group lg:w-1/2"
           >
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="mb-4"
-            >
-              <span className="px-4 py-2 bg-cyan-500/20 text-cyan-400 text-sm font-medium rounded-full border border-cyan-500/30">
+            <CoolMode>
+              <Button className="px-4 py-2 bg-neutral-500/20 text-neutral-100 text-sm font-medium rounded-full border border-neutral-500/30">
                 👋 Olá, eu sou o Diego
-              </span>
-            </motion.div>
+              </Button>
+            </CoolMode>
 
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -123,10 +110,10 @@ export default function Hero() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="btn-primary flex items-center justify-center gap-2 text-sm sm:text-base"
+                  className="btn-primary bg-neutral-500 flex items-center justify-center gap-2 text-sm sm:text-base"
                 >
-                  <span>Ver Projetos</span>
                   <FaGithub className="w-4 h-4" />
+                  <span>Ver Projetos</span>
                 </motion.button>
               </Link>
 
@@ -186,7 +173,7 @@ export default function Hero() {
                   repeat: Infinity,
                   repeatType: "reverse",
                 }}
-                className="absolute aspect-[4/5] w-[75%] inset-0 rounded-3xl bg-gradient-to-r from-cyan-900/30 via-blue-900/30 to-purple-900/10  blur-xl"
+                className="absolute aspect-[4/5] w-[75%] inset-0 rounded-3xl bg-gradient-to-r from-neutral-900/30 via-neutral-500/30 to-neutral-900/10  blur-xl"
               />
 
               {/* Floating Animation */}
@@ -203,6 +190,7 @@ export default function Hero() {
                   src="/image/Perfil.png"
                   alt="Diego Martins - Front-end Developer"
                   fill
+                  priority
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
@@ -237,15 +225,15 @@ export default function Hero() {
                   {/* Stats */}
                   <div className="flex gap-2 sm:gap-4 text-xs sm:text-sm text-gray-300">
                     <div>
-                      <span className="font-semibold text-cyan-400">3</span>{" "}
+                      <span className="font-semibold text-neutral-200">3</span>{" "}
                       Anos Exp
                     </div>
                     <div>
-                      <span className="font-semibold text-cyan-400">20</span>{" "}
+                      <span className="font-semibold text-neutral-200">20</span>{" "}
                       Projetos
                     </div>
                     <div>
-                      <span className="font-semibold text-cyan-400">5+</span>{" "}
+                      <span className="font-semibold text-neutral-200">5+</span>{" "}
                       Tecnologias
                     </div>
                   </div>
