@@ -32,7 +32,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-neutral-900/50 border-t border-neutral-800 relative">
+    <footer className="bg-neutral-900/50 border-t border-neutral-800 relative px-4 sm:px-6">
       {/* Back to Top Button */}
       <motion.button
         onClick={scrollToTop}

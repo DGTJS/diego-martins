@@ -55,7 +55,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="h-screen w-full  relative overflow-hidden bg-gradient-from-gray-900 ">
+    <section className="h-screen w-full relative overflow-hidden bg-gradient-from-gray-900 px-4 sm:px-6 pt-16 sm:pt-20">
       <div className="max-w-7xl mx-auto px-2 sm:px-4 pt-16 sm:pt-24 md:pt-32 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
           {/* Text content */}
@@ -66,7 +66,7 @@ export default function Hero() {
             className="relative group lg:w-1/2"
           >
             <CoolMode>
-              <Button className="px-4 py-2 bg-neutral-500/20 text-neutral-100 text-sm font-medium rounded-full border border-neutral-500/30">
+              <Button className="px-4 py-2 mb-4 bg-neutral-500/20 text-neutral-100 text-sm font-medium rounded-full border border-neutral-500/30">
                 👋 Olá, eu sou o Diego
               </Button>
             </CoolMode>
