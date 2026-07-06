@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/react";
-import "./globals.css";
-
+import type { ReactNode } from "react";
 import { Poppins } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
+
+import { SmoothCursor } from "@/components/ui/smooth-cursor";
+
+import "./globals.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -11,15 +14,19 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Diego Portfolio",
-  description: "Criado por Diego Martins Developer",
+  title: {
+    default: "Diego Martins | Front-end Developer",
+    template: "%s | Diego Martins",
+  },
+  description:
+    "Portfólio de Diego Martins, focado em React, Next.js, TypeScript e interfaces modernas.",
 };
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode;
-}) {
+}: Readonly<{
+  children: ReactNode;
+}>) {
   return (
     <html lang="pt-BR">
       <body
@@ -28,6 +35,7 @@ export default function RootLayout({
       >
         {children}
         <Analytics />
+        <SmoothCursor />
       </body>
     </html>
   );

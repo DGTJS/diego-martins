@@ -1,99 +1,66 @@
 "use client";
+
 import { motion, useScroll, useTransform } from "framer-motion";
+import { ArrowUpRightIcon } from "@heroicons/react/16/solid";
 import Image from "next/image";
-import Link from "next/link";
-import { FaGithub, FaLinkedin, FaEnvelope, FaDownload } from "react-icons/fa";
-import { Button } from "./ui/button";
+import { FaDownload } from "react-icons/fa";
+
+import { heroStats, socialLinks } from "@/app/data/site";
+import { scrollToId } from "@/lib/scroll";
+
+import { ActionButton } from "./portfolio/action-button";
+import { GradientText } from "./portfolio/gradient-text";
+import { SurfacePanel } from "./portfolio/surface-panel";
 import { CoolMode } from "./ui/cool-mode";
+import { SocialLinks } from "./portfolio/social-links";
+import { TextAnimate } from "./ui/text-animate";
 
 export default function Hero() {
   const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 500], [0, 100]);
-
-  const socialLinks = [
-    {
-      name: "GitHub",
-      icon: FaGithub,
-      url: "https://github.com/DGTJS",
-      color: "hover:text-gray-300",
-    },
-    {
-      name: "LinkedIn",
-      icon: FaLinkedin,
-      url: "https://linkedin.com/in/diego-martins7",
-      color: "hover:text-blue-400",
-    },
-    {
-      name: "Email",
-      icon: FaEnvelope,
-      url: "mailto:joaodiegom21@gmail.com",
-      color: "hover:text-red-400",
-    },
-  ];
-
-  const scrollToNextSection = () => {
-    const nextSection = document.getElementById("skills-section");
-    if (nextSection) {
-      nextSection.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    } else {
-      // Se não encontrar a seção de skills, rola para baixo da página
-      window.scrollTo({
-        top: window.innerHeight,
-        behavior: "smooth",
-      });
-    }
-  };
-
-  const handleKeyDown = (event: React.KeyboardEvent) => {
-    if (event.key === "Enter" || event.key === " ") {
-      event.preventDefault();
-      scrollToNextSection();
-    }
-  };
+  const y = useTransform(scrollY, [0, 500], [0, 88]);
 
   return (
-    <section className="h-screen w-full relative overflow-hidden bg-gradient-from-gray-900 px-4 sm:px-6 pt-16 sm:pt-20">
-      <div className="max-w-7xl mx-auto px-2 sm:px-4 pt-16 sm:pt-24 md:pt-32 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
-          {/* Text content */}
+    <section className="relative min-h-screen overflow-hidden bg-[radial-gradient(circle_at_top,_rgba(34,211,238,0.14),_transparent_34%),linear-gradient(180deg,#09090b_0%,#111827_50%,#09090b_100%)] px-4 sm:px-6">
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute -left-24 top-24 h-72 w-72 rounded-full bg-cyan-500/10 blur-3xl" />
+        <div className="absolute right-0 top-1/3 h-96 w-96 rounded-full bg-sky-500/10 blur-3xl" />
+      </div>
+
+      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-4rem)] max-w-7xl items-center px-2 sm:px-4 sm:pt-24 md:pt-32">
+        <div className="flex w-full flex-col gap-12 lg:flex-row lg:items-center lg:gap-16">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -36 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="relative group lg:w-1/2"
+            transition={{ duration: 0.85, ease: "easeOut" }}
+            className="lg:w-1/2"
           >
             <CoolMode>
-              <Button className="px-4 py-2 mb-4 bg-neutral-500/20 text-neutral-100 text-sm font-medium rounded-full border border-neutral-500/30">
-                👋 Olá, eu sou o Diego
-              </Button>
+              <SurfacePanel
+                interactive={false}
+                className="mb-5 rounded-full w-[fit-content] px-4 py-2 text-sm font-medium text-slate-100"
+              >
+                <TextAnimate animation="blurInUp" by="word">
+                  👋 Olá, eu sou o Diego
+                </TextAnimate>
+              </SurfacePanel>
             </CoolMode>
 
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="text-start text-6xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 md:mb-8 text-white "
+              transition={{ duration: 0.75, delay: 0.2 }}
+              className="text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl"
             >
-              <span className="text-gradient">Front End</span>
+              <GradientText>Front End</GradientText>
               <br />
-              <motion.span
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.8 }}
-                className="text-gradient"
-              >
-                Developer
-              </motion.span>
+              <GradientText>Developer</GradientText>
             </motion.h1>
 
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.1 }}
-              className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8 leading-relaxed"
+              transition={{ duration: 0.75, delay: 0.4 }}
+              className="mt-6 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg"
             >
               Desenvolvedor apaixonado por criar experiências digitais
               inovadoras. Especializado em React, Node.js e TypeScript, sempre
@@ -101,178 +68,128 @@ export default function Hero() {
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.4 }}
-              className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8"
+              transition={{ duration: 0.75, delay: 0.55 }}
+              className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4"
             >
-              <Link href="#work">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="btn-primary bg-neutral-500 flex items-center justify-center gap-2 text-sm sm:text-base"
-                >
-                  <FaGithub className="w-4 h-4" />
-                  <span>Ver Projetos</span>
-                </motion.button>
-              </Link>
+              <ActionButton asChild>
+                <a href="#work" className="flex items-center gap-2">
+                  <ArrowUpRightIcon className="h-4 w-4" />
+                  Ver projetos
+                </a>
+              </ActionButton>
 
-              <Link href="curriculo_Diego_Martins.pdf" download>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="btn-secondary flex items-center justify-center gap-2 text-sm sm:text-base"
+              <ActionButton asChild variant="secondary">
+                <a
+                  href="/curriculo_Diego_Martins.pdf"
+                  download
+                  className="flex items-center gap-2"
                 >
-                  <FaDownload className="w-4 h-4" />
-                  <span>Download CV</span>
-                </motion.button>
-              </Link>
+                  <FaDownload className="h-4 w-4" />
+                  Download CV
+                </a>
+              </ActionButton>
             </motion.div>
 
-            {/* Social Links */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.7 }}
-              className="flex gap-3 sm:gap-4"
+              transition={{ duration: 0.75, delay: 0.75 }}
+              className="mt-8"
             >
-              {socialLinks.map((social) => {
-                const IconComponent = social.icon;
-                return (
-                  <motion.a
-                    key={social.name}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.1, y: -2 }}
-                    whileTap={{ scale: 0.95 }}
-                    className={`p-2 sm:p-3 rounded-lg bg-white/500 dark:bg-gray-800/50 border border-gray-300 dark:border-gray-700 hover:border-cyan-500/30 transition-all duration-300 ${social.color}`}
-                  >
-                    <IconComponent className="w-4 h-4 sm:w-5 sm:h-5" />
-                  </motion.a>
-                );
-              })}
+              <SocialLinks links={socialLinks} size="sm" className="gap-3" />
             </motion.div>
           </motion.div>
 
-          {/* Image Card */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 36 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-            className="w-full lg:w-1/2 relative hidden sm:block"
+            transition={{ duration: 0.85, delay: 0.2, ease: "easeOut" }}
+            className="hidden lg:block lg:w-1/2"
             style={{ y }}
           >
-            <div className="relative w-full max-w-md mx-auto lg:max-w-none aspect-square group">
-              {/* Animated Border */}
+            <div className="relative aspect-[4/5] w-full max-w-md lg:max-w-none">
               <motion.div
-                initial={{ scale: 0.8 }}
-                animate={{ scale: 1 }}
+                animate={{ scale: [0.96, 1, 0.96] }}
                 transition={{
-                  duration: 2,
+                  duration: 7,
                   repeat: Infinity,
-                  repeatType: "reverse",
+                  ease: "easeInOut",
                 }}
-                className="absolute aspect-[4/5] w-[75%] inset-0 rounded-3xl bg-gradient-to-r from-neutral-900/30 via-neutral-500/30 to-neutral-900/10  blur-xl"
+                className="absolute inset-0 rounded-[2rem] bg-gradient-to-r from-cyan-500/20 via-white/10 to-sky-500/20 blur-2xl"
               />
 
-              {/* Floating Animation */}
               <motion.div
-                animate={{ y: [0, -20, 0] }}
+                animate={{ y: [0, -16, 0] }}
                 transition={{
                   duration: 6,
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="flex w-[70%] aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden border-none backdrop-blur-2xl shadow-2xl"
+                className="theme-surface-strong theme-surface-interactive group relative flex h-[65vh] overflow-hidden rounded-[2rem] shadow-2xl shadow-cyan-500/10"
               >
                 <Image
                   src="/image/Perfil.png"
                   alt="Diego Martins - Front-end Developer"
                   fill
                   priority
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="30vw"
+                  className="object-cover bg-center transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
 
-                {/* Profile Info */}
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 1.2 }}
-                  className="absolute bottom-4 sm:bottom-8 left-4 sm:left-8 right-4 sm:right-8"
-                >
-                  <div className="text-xl sm:text-2xl font-bold text-white dark:text-white mb-2">
+                <div className="absolute bottom-4 left-4 right-4 sm:bottom-8 sm:left-8 sm:right-8">
+                  <div className="text-xl font-semibold text-white sm:text-2xl">
                     Diego Martins
-                    <motion.span
-                      className="block text-gradient text-base sm:text-lg font-medium"
-                      animate={{
-                        backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-                      }}
-                      transition={{
-                        duration: 3,
-                        repeat: Infinity,
-                        ease: "easeInOut",
-                      }}
-                      style={{
-                        backgroundSize: "200% 100%",
-                      }}
+                    <GradientText
+                      as="span"
+                      className="block text-base font-medium sm:text-lg"
                     >
                       Front-end Developer
-                    </motion.span>
+                    </GradientText>
                   </div>
 
-                  {/* Stats */}
-                  <div className="flex gap-2 sm:gap-4 text-xs sm:text-sm text-gray-300">
-                    <div>
-                      <span className="font-semibold text-neutral-200">3</span>{" "}
-                      Anos Exp
-                    </div>
-                    <div>
-                      <span className="font-semibold text-neutral-200">20</span>{" "}
-                      Projetos
-                    </div>
-                    <div>
-                      <span className="font-semibold text-neutral-200">5+</span>{" "}
-                      Tecnologias
-                    </div>
+                  <div className="mt-4 grid grid-cols-3 gap-2 text-xs text-slate-300 sm:text-sm">
+                    {heroStats.map((stat) => (
+                      <SurfacePanel
+                        key={stat.label}
+                        variant="subtle"
+                        interactive={false}
+                        className="rounded-2xl px-3 py-2"
+                      >
+                        <span className="block text-sm font-semibold text-white">
+                          {stat.value}
+                        </span>
+                        <span>{stat.label}</span>
+                      </SurfacePanel>
+                    ))}
                   </div>
-                </motion.div>
+                </div>
               </motion.div>
             </div>
           </motion.div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
+      <motion.button
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 2 }}
-        className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2"
+        transition={{ delay: 1.5 }}
+        onClick={() => scrollToId("skills")}
+        whileHover={{ scale: 1.08 }}
+        whileTap={{ scale: 0.95 }}
+        className="group absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-neutral-950"
+        aria-label="Rolar para a próxima seção"
       >
-        <motion.button
-          onClick={scrollToNextSection}
-          onKeyDown={handleKeyDown}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          className="group cursor-pointer focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900"
-          aria-label="Rolar para próxima seção"
-          tabIndex={0}
-        >
+        <div className="flex h-11 w-7 justify-center rounded-full border border-cyan-400/50 group-hover:border-cyan-300 transition-colors">
           <motion.div
-            animate={{ y: [0, 10, 0] }}
+            animate={{ y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-6 h-10 border-2 border-cyan-500 rounded-full flex justify-center group-hover:border-cyan-400 transition-colors"
-          >
-            <motion.div
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="w-1 h-3 bg-cyan-500 rounded-full mt-2 group-hover:bg-cyan-400 transition-colors"
-            />
-          </motion.div>
-        </motion.button>
-      </motion.div>
+            className="mt-2 h-3 w-1 rounded-full bg-cyan-400 group-hover:bg-cyan-300 transition-colors"
+          />
+        </div>
+      </motion.button>
     </section>
   );
 }

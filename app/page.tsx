@@ -1,25 +1,19 @@
+import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 import Hero from "@/components/hero";
 import Main from "@/components/main";
 import Navbar from "@/components/navbar";
 import Skills from "@/components/skills";
-import Contact from "@/components/contact";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-neutral-950 text-white">
+    <main id="top" className="theme-app-shell min-h-screen pb-40 sm:pb-44">
       <Navbar />
       <Hero />
-      <div id="skills-section">
-        <Skills />
-      </div>
-      <div id="projects-section">
-        <Main />
-      </div>
-      <div id="contact-section">
-        <Contact />
-      </div>
+      <Skills />
+      <Main />
+      <Contact />
       <Footer />
-    </div>
+    </main>
   );
 }

@@ -13,17 +13,21 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
+        hostname: "cdn.simpleicons.org",
+      },
+      {
+        protocol: "https",
         hostname: "cdn-icons-png.flaticon.com",
       },
     ],
   },
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  webpack: (config: any) => {
-    config.resolve = config.resolve || {};
+  webpack: (config) => {
+    config.resolve ??= {};
     config.resolve.fallback = {
-      ...(config.resolve.fallback || {}),
+      ...(config.resolve.fallback ?? {}),
       fs: false,
     };
+
     return config;
   },
   turbopack: {},
