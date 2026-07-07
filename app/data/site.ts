@@ -19,19 +19,19 @@ export const socialLinks: SocialLink[] = [
     name: "GitHub",
     href: "https://github.com/DGTJS",
     icon: FaGithub,
-    iconClassName: "group-hover:text-slate-100",
+    iconClassName: "group-hover:text-white",
   },
   {
     name: "LinkedIn",
     href: "https://linkedin.com/in/diego-martins7",
     icon: FaLinkedin,
-    iconClassName: "group-hover:text-sky-300",
+    iconClassName: "group-hover:text-zinc-100",
   },
   {
     name: "Email",
     href: "mailto:joaodiegom21@gmail.com",
     icon: FaEnvelope,
-    iconClassName: "group-hover:text-rose-300",
+    iconClassName: "group-hover:text-zinc-100",
   },
 ];
 
@@ -47,26 +47,26 @@ export const contactDetails: ContactDetail[] = [
     title: "Email",
     value: "joaodiegom21@gmail.com",
     href: "mailto:joaodiegom21@gmail.com",
-    iconClassName: "text-sky-300",
+    iconClassName: "text-zinc-200",
   },
   {
     icon: FaWhatsapp,
     title: "WhatsApp",
     value: "+55 (11) 99005-9775",
     href: "https://wa.me/5511990059775",
-    iconClassName: "text-emerald-300",
+    iconClassName: "text-zinc-200",
   },
   {
     icon: MapPinIcon,
     title: "Localização",
     value: "São Paulo, Brasil",
     href: "https://www.google.com/maps/search/?api=1&query=S%C3%A3o+Paulo%2C+Brasil",
-    iconClassName: "text-rose-300",
+    iconClassName: "text-zinc-200",
   },
   {
     icon: ClockIcon,
     title: "Disponibilidade",
     value: "Seg a Sáb, 9h-18h",
-    iconClassName: "text-violet-300",
+    iconClassName: "text-zinc-200",
   },
 ];

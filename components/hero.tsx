@@ -20,10 +20,10 @@ export default function Hero() {
   const y = useTransform(scrollY, [0, 500], [0, 88]);
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[radial-gradient(circle_at_top,_rgba(34,211,238,0.14),_transparent_34%),linear-gradient(180deg,#09090b_0%,#111827_50%,#09090b_100%)] px-4 sm:px-6">
+    <section className="relative min-h-screen overflow-hidden bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_34%),linear-gradient(180deg,#050505_0%,#0d0d0f_50%,#050505_100%)] px-4 sm:px-6">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -left-24 top-24 h-72 w-72 rounded-full bg-cyan-500/10 blur-3xl" />
-        <div className="absolute right-0 top-1/3 h-96 w-96 rounded-full bg-sky-500/10 blur-3xl" />
+        <div className="absolute -left-24 top-24 h-72 w-72 rounded-full bg-white/5 blur-3xl" />
+        <div className="absolute right-0 top-1/3 h-96 w-96 rounded-full bg-white/4 blur-3xl" />
       </div>
 
       <div className="relative z-10 mx-auto flex min-h-[calc(100vh-4rem)] max-w-7xl items-center px-2 sm:px-4 sm:pt-24 md:pt-32">
@@ -117,7 +117,7 @@ export default function Hero() {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="absolute inset-0 rounded-[2rem] bg-gradient-to-r from-cyan-500/20 via-white/10 to-sky-500/20 blur-2xl"
+                className="absolute inset-0 rounded-[2rem] bg-gradient-to-r from-white/10 via-white/5 to-white/10 blur-2xl"
               />
 
               <motion.div
@@ -127,7 +127,7 @@ export default function Hero() {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                className="theme-surface-strong theme-surface-interactive group relative flex h-[65vh] overflow-hidden rounded-[2rem] shadow-2xl shadow-cyan-500/10"
+                className="theme-surface-strong theme-surface-interactive group relative flex h-[65vh] overflow-hidden rounded-[2rem] shadow-2xl shadow-black/30"
               >
                 <Image
                   src="/image/Perfil.png"
@@ -179,14 +179,14 @@ export default function Hero() {
         onClick={() => scrollToId("skills")}
         whileHover={{ scale: 1.08 }}
         whileTap={{ scale: 0.95 }}
-        className="group absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-neutral-950"
+        className="group absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full focus:outline-none focus:ring-2 focus:ring-white/60 focus:ring-offset-2 focus:ring-offset-neutral-950"
         aria-label="Rolar para a próxima seção"
       >
-        <div className="flex h-11 w-7 justify-center rounded-full border border-cyan-400/50 group-hover:border-cyan-300 transition-colors">
+        <div className="flex h-11 w-7 justify-center rounded-full border border-white/30 transition-colors group-hover:border-white/60">
           <motion.div
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="mt-2 h-3 w-1 rounded-full bg-cyan-400 group-hover:bg-cyan-300 transition-colors"
+            className="mt-2 h-3 w-1 rounded-full bg-white/70 transition-colors group-hover:bg-white"
           />
         </div>
       </motion.button>

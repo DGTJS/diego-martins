@@ -130,12 +130,12 @@ export default function Contact() {
               </ActionButton>
 
               {sent ? (
-                <p className="text-sm text-emerald-300">
+                <p className="text-sm text-zinc-300">
                   Mensagem enviada com sucesso!
                 </p>
               ) : null}
 
-              {error ? <p className="text-sm text-rose-300">{error}</p> : null}
+              {error ? <p className="text-sm text-zinc-400">{error}</p> : null}
             </form>
           </SurfacePanel>
         </motion.div>

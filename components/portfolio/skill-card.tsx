@@ -57,7 +57,7 @@ export function SkillCard({
 
           <div className="w-full space-y-3">
             <div>
-              <h4 className="text-lg font-semibold" style={{ color: skill.color }}>
+              <h4 className="text-lg font-semibold text-white">
                 {skill.name}
               </h4>
               <p className="text-sm text-slate-400">
@@ -69,7 +69,8 @@ export function SkillCard({
               <motion.div
                 className="h-full rounded-full"
                 style={{
-                  background: `linear-gradient(90deg, ${skill.color}, ${skill.color}80)`,
+                  background:
+                    "linear-gradient(90deg, rgba(255,255,255,0.92), rgba(255,255,255,0.45))",
                 }}
                 initial={{ width: 0 }}
                 whileInView={{ width: `${skill.level}%` }}

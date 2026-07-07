@@ -12,12 +12,11 @@ interface ChipProps {
 export function Chip({
   children,
   icon: Icon,
-  iconColor,
   className,
 }: ChipProps) {
   return (
     <span className={cn("theme-chip", className)}>
-      {Icon ? <Icon className="h-4 w-4 shrink-0" style={{ color: iconColor }} /> : null}
+      {Icon ? <Icon className="h-4 w-4 shrink-0 text-white/75" /> : null}
       <span>{children}</span>
     </span>
   );

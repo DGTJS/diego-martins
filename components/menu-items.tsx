@@ -20,7 +20,7 @@ export default function MenuItem({ children, index, href }: MenuItemProps) {
         duration: 0.28,
         ease: "easeOut",
       }}
-      className="relative overflow-hidden px-2 py-1 text-sm font-medium text-slate-300 transition-colors hover:text-white"
+      className="relative overflow-hidden px-2 py-1 text-sm font-medium text-slate-300 transition-colors hover:text-zinc-100"
     >
       {children}
     </motion.a>

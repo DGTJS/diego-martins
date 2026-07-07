@@ -56,7 +56,7 @@ export default function Skills() {
         <SurfacePanel
           variant="strong"
           interactive={false}
-          className="bg-gradient-to-r from-cyan-500/10 via-white/5 to-sky-500/10 p-8 text-center"
+          className="bg-gradient-to-r from-white/5 via-white/3 to-white/5 p-8 text-center"
         >
             <h3 className="mb-4 text-2xl font-semibold text-white">
               Sempre aprendendo

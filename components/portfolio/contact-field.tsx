@@ -27,7 +27,7 @@ export function ContactField({
 }: ContactFieldProps) {
   return (
     <div className="space-y-2">
-      <label htmlFor={id} className="text-sm font-medium text-white">
+      <label htmlFor={id} className="text-sm font-medium text-zinc-100">
         {label}
       </label>
       {as === "textarea" ? (

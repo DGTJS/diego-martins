@@ -129,7 +129,7 @@ function IconContainer({
         style={{ width, height }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="relative flex aspect-square items-center justify-center rounded-full border border-cyan-400/10 bg-[#0f172a] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]"
+        className="relative flex aspect-square items-center justify-center rounded-full border border-white/10 bg-[#101012] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]"
       >
         <AnimatePresence>
           {hovered ? (
@@ -137,7 +137,7 @@ function IconContainer({
               initial={{ opacity: 0, y: 10, x: "-50%" }}
               animate={{ opacity: 1, y: 0, x: "-50%" }}
               exit={{ opacity: 0, y: 2, x: "-50%" }}
-              className="absolute -top-8 left-1/2 w-fit whitespace-pre rounded-md border border-cyan-400/20 bg-[#020617] px-2 py-0.5 text-xs text-slate-100 shadow-lg"
+              className="absolute -top-8 left-1/2 w-fit whitespace-pre rounded-md border border-white/15 bg-[#0b0b0d] px-2 py-0.5 text-xs text-slate-100 shadow-lg"
             >
               {title}
             </motion.div>
@@ -148,7 +148,7 @@ function IconContainer({
           style={{ width: widthIcon, height: heightIcon }}
           className="flex items-center justify-center"
         >
-          <span className="text-cyan-200">{icon}</span>
+          <span className="text-zinc-200">{icon}</span>
         </motion.div>
       </motion.div>
     </a>

@@ -13,7 +13,7 @@ interface ContactInfoCardProps {
 
 export function ContactInfoCard({ item, index }: ContactInfoCardProps) {
   const Icon = item.icon;
-  const iconClassName = cn("h-5 w-5 shrink-0", item.iconClassName ?? "text-white");
+  const iconClassName = cn("h-5 w-5 shrink-0", item.iconClassName ?? "text-zinc-100");
   const content = (
     <SurfacePanel className="p-6">
       <div className="flex items-center gap-4">

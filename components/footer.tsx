@@ -37,7 +37,7 @@ export default function Footer() {
                       event.preventDefault();
                       scrollToId(item.href.replace("#", ""));
                     }}
-                    className="text-sm text-slate-400 transition-colors hover:text-cyan-300"
+                    className="text-sm text-slate-400 transition-colors hover:text-white"
                   >
                     {item.name}
                   </a>

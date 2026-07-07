@@ -52,7 +52,7 @@ export function SocialLinks({
             whileHover={{ scale: 1.06, y: -2 }}
             whileTap={{ scale: 0.96 }}
             className={cn(
-              "group inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white/80 backdrop-blur-sm transition-all duration-300 hover:border-cyan-400/30 hover:bg-white/10",
+              "group inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white/80 backdrop-blur-sm transition-all duration-300 hover:border-white/20 hover:bg-white/10",
               sizeStyles[size].item,
               link.className,
               itemClassName,
